@@ -1,12 +1,11 @@
 [Unit]
 Description=Nginx Proxy Manager SSL Cert Rsync
 After=wg-quick@omv-service.service
-StartLimitIntervalSec=0[Service]
-Type=simple
+
+[Service]
 Restart=always
-RestartSec=1
-User=centos
-ExecStart=/bin/bash /path/to/sync-npm-ssh.service
+WorkingDirectory=/root/ssl-sync/
+ExecStart=/bin/bash /root/ssl-sync/sync-ssh.bash
 
 [Install]
 WantedBy=multi-user.target

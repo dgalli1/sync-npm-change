@@ -7,5 +7,5 @@ This script syncs the certs to an other server so that you can acces the certs d
 
 * Auth your local ssh key to target server
 * Edit sync-ssh.bash script for your server
-* Install systemctl task
-* Start systemctl task
+* Install systemctl task (cp sync-npm-ssh.service /etc/systemd/system/)
+* Start systemctl task (systemctl enable --now sync-npm-ssh)
